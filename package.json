@@ -1,0 +1,19 @@
+{
+  "name": "systemd",
+  "version": "1.0.0",
+  "description": "systemd tatus / restart ",
+  "repository": "https://github.com/bugsounet/systemd",
+  "main": "src/index.js",
+  "keywords": [
+    "systemd"
+  ],
+  "bugs": "https://github.com/bugsounet/systemd",
+  "author": [
+    "Gil Tizhon",
+    "bugsounet"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "shelljs": "^0.8.4"
+  }
+}
