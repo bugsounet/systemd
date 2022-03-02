@@ -1,7 +1,7 @@
 {
   "name": "@bugsounet/systemd",
   "version": "1.0.1",
-  "description": "systemd tatus / restart ",
+  "description": "systemd status / restart / stop ",
   "repository": "https://github.com/bugsounet/systemd",
   "main": "src/index.js",
   "keywords": [
