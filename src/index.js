@@ -45,6 +45,25 @@ class Systemd {
     }
   }
 
+  async stop() {
+    if (!this.init) return { error: "not initialized" }
+    const command = `sudo systemctl stop ${this.service}`
+
+    try {
+      const { stdout, stderr } = await exec(command)
+    } catch (e) {
+      let error = sliceLast(e.message, "\n")
+      return {
+        name: this.service,
+        error: error
+      }
+    }
+    return {
+      name: this.service,
+      stop: "ok"
+    }
+  }
+
   checkService() {
     if (typeof this.service === 'string') this.init = true
     else throw new Error ("service name missing")
